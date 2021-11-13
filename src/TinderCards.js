@@ -30,7 +30,7 @@ function TinderCards() {
 
   return (
     <div>
-      <h1>Tinder Cards Rendered</h1>
+      {/* <h1>Tinder Cards Rendered</h1> */}
       <div className="tinderCards__cardContainer">
         {people.map((person) => (
           <TinderCard
