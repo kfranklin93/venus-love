@@ -17,7 +17,7 @@ function App() {
           <Route path="/match-chat">I am the CHAT page</Route>
           <Route path="/counselor-chat">I am the counselor chat page!</Route>
           {/* Keep your default route at the bottom */}
-          <Route path="/">
+            <Route path="/">
             <TinderCards />
             <SwipeButtons />
           </Route>
