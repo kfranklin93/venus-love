@@ -1,8 +1,10 @@
 import './App.css';
 // import React, { Fragment } from 'react';
-import TinderCard from 'react-tinder-card'
+// import TinderCard from 'react-tinder-card';
 
 import Header from './Header';
+import TinderCards from './TinderCards';
+
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
@@ -19,30 +21,14 @@ function App() {
         </Route>
         {/* Keep your default route at the bottom */}
         <Route path="/">
-          I am the home page!
+            <TinderCards />
         </Route>
       </Switch>
       </Router>
     </div>
   );
 } 
-// export const FragmentSupportingSwitch = ({children}) => {
-//   const flattenedChildren = [];
-//   flatten(flattenedChildren, children);
-//   return React.createElement.apply(React, [Routes, null].concat(flattenedChildren));
-// }
 
-// function flatten(target, children) {
-//   React.Children.forEach(children, child => {
-//     if (React.isValidElement(child)) {
-//       if (child.type === Fragment) {
-//         flatten(target, child.props.children);
-//       } else {
-//         target.push(child);
-//       }
-//     }
-//   });
-// }
 export default App;
 
 
