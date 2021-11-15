@@ -4,17 +4,32 @@ import PersonIcon from '@mui/icons-material/Person';
 import ForumIcon from '@mui/icons-material/Forum';
 // import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import IconButton from '@mui/material/IconButton';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
 
 // functional component which returns some JSX 
-function Header() {
+function Header({ backButton }) {
+
+    const history = useHistory()
+
     return (
         <div className="header">
-            <Link to="/profile">
+            {backButton ? (
+        <IconButton onClick={() => history.replace(backButton)}>
+          <ArrowBackIosIcon fontSize='large' className='header__icon' />
+        </IconButton>
+      ) : (
+        <IconButton>
+          <PersonIcon fontSize='large' className='header__icon' />
+        </IconButton>
+      )}
+
+            {/* <Link to="/profile">
             <IconButton>
                 <PersonIcon className="header__icon" fontSize="large" />
             </IconButton>
-            </Link>
+            </Link> */}
             <Link to="/">
             <img
                 className="header__tinderLogo"
