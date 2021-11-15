@@ -1,6 +1,8 @@
 import "./App.css";
-// import React, { Fragment } from 'react';
+import React from 'react';
 // import TinderCard from 'react-tinder-card';
+import Chats from './Chats'
+import ChatScreen from './ChatScreen'
 
 import Header from "./Header";
 import SwipeButtons from "./SwipeButtons";
@@ -10,11 +12,19 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Header />
         <Switch>
-          <Route path="/match-chat">I am the CHAT page</Route>
+          <Route path="/match-chat/:person">
+          <Header backButton='/match-chat' />
+            <ChatScreen />
+          </Route>
+            {/* chat path */}
+           <Route path='/match-chat'>
+            <Header backButton='/' />
+            <Chats />
+          </Route>
           <Route path="/counselor-chat">I am the counselor chat page!</Route>
           {/* Keep your default route at the bottom */}
             <Route path="/">
