@@ -25,7 +25,7 @@ function App() {
             <Header backButton='/' />
             <Chats />
           </Route>
-          <Route path="/counselor-chat">I am the counselor chat page!</Route>
+          {/* <Route path="/counselor-chat">I am the counselor chat page!</Route> */}
           {/* Keep your default route at the bottom */}
             <Route path="/">
             <TinderCards />

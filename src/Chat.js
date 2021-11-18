@@ -1,11 +1,13 @@
 import React from 'react'
 import './Chat.css'
-import { Avatar } from '@material-ui/core'
+import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-router-dom'
+import'./ChatScreen.js'
 
 function Chat({ name, message, timestamp, profilePic }) {
   return (
-    <Link to={`/chat/${name}`}>
+    // <Link to={`/chat/${name}`}>
+    <Link to="/match-chat/:person"> 
       <div className='chat'>
         <Avatar className='chat__image' src={profilePic} />
         <div className='chat__details'>
